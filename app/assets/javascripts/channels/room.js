@@ -6,14 +6,19 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
 
     },
     received: function(data) {
-      alert(data['message']);
+      //alert(data['message']);
+      var message = data['message']
+      $("#messages").append(`<p>${message}</p>`);
     },//バックエンドから送れられてきたデータをここで受け取る
 
-    speak: function() { //フロントエンドからバックエンドにデータを送信できる
-       return this.perform("speak", {message: "aaaaaaa"}) //room_channel.rbのspeakアクションにいく
+    speak: function(content) { //フロントエンドからバックエンドにデータを送信できる
+       return this.perform("speak", {message: content}) //room_channel.rbのspeakアクションにいく
     }
 });
 
-// $("#button").click(function(){
-//     alert(33);
-// })
+$(function(){
+    $("#button").click(function(){
+        var content = $("#message").val();
+        App.room.speak(content);
+    })
+});
