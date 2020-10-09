@@ -1,7 +1,7 @@
 class RoomChannel < ApplicationCable::Channel
   def subscribed #フロントエンドとバックエンドがつながったときに発動
     #binding.pry
-    stream_from "room_channel"
+    stream_from "room_channel"  #これは必要
   end
 
   def unsubscribed

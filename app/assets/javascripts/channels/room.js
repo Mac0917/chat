@@ -19,6 +19,8 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
 $(function(){
     $("#button").click(function(){
         var content = $("#message").val();
+        var img = $("#image").val();
+        alert(img);
         App.room.speak(content);
     })
 });
