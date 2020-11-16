@@ -39,10 +39,10 @@ http://localhost/<br>
 
 ## chatアプリの作り方
 
-```rails g channel room```
+```rails g channel room```<br>
 これで app/channels/room_channel.rb と<br>
 javascripts/channels/roooms.coffeeが作られる　<br>
-coffeeの書き方知らんのでjsに書き換えた<br
+coffeeの書き方知らんのでjsに書き換えた<br>
 
 coffeeはjsを簡単な記述で書くためのもの<br>
 rals new app名 --skip-coffee　でcoffeeが作られなくなる<br>
