@@ -24,7 +24,7 @@ docker-composeを実行<br>
 `rails db:migrate`<br>
 
 アクセス<br>
-http://localhost/<br>
+http://localhost:3000/<br>
 
 終了<br>
 `exit`(コンテナから出る)<br>
